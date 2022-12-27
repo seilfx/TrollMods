@@ -110,6 +110,7 @@
 		597F6A8A295B52F300E9DDF3 /* trollformation2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation2.png; sourceTree = "<group>"; };
 		597F6A8B295B52F300E9DDF3 /* trollformation32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation32.png; sourceTree = "<group>"; };
 		597F6A8C295B52F300E9DDF3 /* trollformation10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation10.png; sourceTree = "<group>"; };
+		597F6AB5295B59AC00E9DDF3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +127,7 @@
 		597F69E2295B3DA700E9DDF3 = {
 			isa = PBXGroup;
 			children = (
+				597F6AB5295B59AC00E9DDF3 /* README.md */,
 				597F69ED295B3DA700E9DDF3 /* TrollMods */,
 				597F69EC295B3DA700E9DDF3 /* Products */,
 			);
