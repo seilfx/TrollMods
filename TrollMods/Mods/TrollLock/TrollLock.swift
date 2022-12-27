@@ -7,11 +7,15 @@
 
 import SwiftUI
 
+private var trollLockVersion = "v0.2";
+
 func TrollLockReplace() {
     trollLockPrepare812();
 }
 
 struct TrollLockView: View {
+    @State private var showInfo = false;
+    
     var body: some View {
         VStack {
             Image("TrollLock")
@@ -24,6 +28,17 @@ struct TrollLockView: View {
                 .controlSize(.large)
                 .tint(.blue)
                 .buttonStyle(.bordered)
+        }
+        .toolbar {
+            Button(action: { showInfo = true }) {
+                Image(systemName: "info.circle")
+            }
+            .alert(isPresented: $showInfo) {
+                Alert(
+                    title: Text("TrollLock Reborn (\(trollLockVersion))"),
+                    message: Text("Made with ♡ by Nathan & haxi0")
+                )
+            }
         }
     }
 }
