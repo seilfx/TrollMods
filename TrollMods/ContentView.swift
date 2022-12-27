@@ -9,13 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                NavigationLink(destination: TrollMods.TrollLockView()) {
+                    HStack {
+                        Image("TrollLock")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 32)
+                        Text("TrollLock")
+                    }
+                }
+            }
+            .navigationTitle("TrollMods")
         }
-        .padding()
     }
 }
 

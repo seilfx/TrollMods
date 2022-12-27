@@ -11,6 +11,50 @@
 		597F69F1295B3DA700E9DDF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F69F0295B3DA700E9DDF3 /* ContentView.swift */; };
 		597F69F3295B3DA800E9DDF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597F69F2295B3DA800E9DDF3 /* Assets.xcassets */; };
 		597F69F6295B3DA800E9DDF3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597F69F5295B3DA800E9DDF3 /* Preview Assets.xcassets */; };
+		597F6A02295B42E400E9DDF3 /* TrollLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F6A00295B428200E9DDF3 /* TrollLock.swift */; };
+		597F6A05295B443F00E9DDF3 /* TrollLock.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A04295B443F00E9DDF3 /* TrollLock.xcassets */; };
+		597F6A0B295B4C3800E9DDF3 /* MacDirtyCow.m in Sources */ = {isa = PBXBuildFile; fileRef = 597F6A0A295B4C3800E9DDF3 /* MacDirtyCow.m */; };
+		597F6A11295B4E5100E9DDF3 /* TrollLockPrepare.m in Sources */ = {isa = PBXBuildFile; fileRef = 597F6A10295B4E5100E9DDF3 /* TrollLockPrepare.m */; };
+		597F6A8D295B52F300E9DDF3 /* trollformation27.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A65295B52F100E9DDF3 /* trollformation27.png */; };
+		597F6A8E295B52F300E9DDF3 /* trollformation6.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A66295B52F100E9DDF3 /* trollformation6.png */; };
+		597F6A8F295B52F300E9DDF3 /* trollformation25.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A67295B52F100E9DDF3 /* trollformation25.png */; };
+		597F6A90295B52F300E9DDF3 /* trollformation37.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A68295B52F100E9DDF3 /* trollformation37.png */; };
+		597F6A91295B52F300E9DDF3 /* trollformation34.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A69295B52F100E9DDF3 /* trollformation34.png */; };
+		597F6A92295B52F300E9DDF3 /* trollformation36.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A6A295B52F100E9DDF3 /* trollformation36.png */; };
+		597F6A93295B52F300E9DDF3 /* trollformation11.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A6B295B52F100E9DDF3 /* trollformation11.png */; };
+		597F6A94295B52F300E9DDF3 /* trollformation16.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A6C295B52F100E9DDF3 /* trollformation16.png */; };
+		597F6A95295B52F300E9DDF3 /* trollformation23.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A6D295B52F100E9DDF3 /* trollformation23.png */; };
+		597F6A96295B52F300E9DDF3 /* trollformation7.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A6E295B52F100E9DDF3 /* trollformation7.png */; };
+		597F6A97295B52F300E9DDF3 /* trollformation12.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A6F295B52F100E9DDF3 /* trollformation12.png */; };
+		597F6A98295B52F300E9DDF3 /* trollformation31.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A70295B52F100E9DDF3 /* trollformation31.png */; };
+		597F6A99295B52F300E9DDF3 /* trollformation9.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A71295B52F100E9DDF3 /* trollformation9.png */; };
+		597F6A9A295B52F300E9DDF3 /* trollformation30.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A72295B52F100E9DDF3 /* trollformation30.png */; };
+		597F6A9B295B52F300E9DDF3 /* trollformation13.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A73295B52F100E9DDF3 /* trollformation13.png */; };
+		597F6A9C295B52F300E9DDF3 /* trollformation14.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A74295B52F100E9DDF3 /* trollformation14.png */; };
+		597F6A9D295B52F300E9DDF3 /* trollformation15.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A75295B52F100E9DDF3 /* trollformation15.png */; };
+		597F6A9E295B52F300E9DDF3 /* trollformation21.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A76295B52F100E9DDF3 /* trollformation21.png */; };
+		597F6A9F295B52F300E9DDF3 /* trollformation3.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A77295B52F100E9DDF3 /* trollformation3.png */; };
+		597F6AA0295B52F300E9DDF3 /* trollformation1.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A78295B52F100E9DDF3 /* trollformation1.png */; };
+		597F6AA1295B52F300E9DDF3 /* trollformation29.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A79295B52F200E9DDF3 /* trollformation29.png */; };
+		597F6AA2295B52F300E9DDF3 /* trollformation20.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A7A295B52F200E9DDF3 /* trollformation20.png */; };
+		597F6AA3295B52F300E9DDF3 /* trollformation5.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A7B295B52F200E9DDF3 /* trollformation5.png */; };
+		597F6AA4295B52F300E9DDF3 /* trollformation35.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A7C295B52F200E9DDF3 /* trollformation35.png */; };
+		597F6AA5295B52F300E9DDF3 /* trollformation17.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A7D295B52F200E9DDF3 /* trollformation17.png */; };
+		597F6AA6295B52F300E9DDF3 /* trollformation38.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A7E295B52F200E9DDF3 /* trollformation38.png */; };
+		597F6AA7295B52F300E9DDF3 /* trollformation18.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A7F295B52F200E9DDF3 /* trollformation18.png */; };
+		597F6AA8295B52F300E9DDF3 /* trollformation19.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A80295B52F200E9DDF3 /* trollformation19.png */; };
+		597F6AA9295B52F300E9DDF3 /* trollformation22.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A81295B52F200E9DDF3 /* trollformation22.png */; };
+		597F6AAA295B52F300E9DDF3 /* trollformation28.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A82295B52F200E9DDF3 /* trollformation28.png */; };
+		597F6AAB295B52F300E9DDF3 /* trollformation33.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A83295B52F200E9DDF3 /* trollformation33.png */; };
+		597F6AAC295B52F300E9DDF3 /* trollformation4.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A84295B52F200E9DDF3 /* trollformation4.png */; };
+		597F6AAD295B52F300E9DDF3 /* trollformation26.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A85295B52F200E9DDF3 /* trollformation26.png */; };
+		597F6AAE295B52F300E9DDF3 /* trollformation24.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A86295B52F200E9DDF3 /* trollformation24.png */; };
+		597F6AAF295B52F300E9DDF3 /* trollformation39.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A87295B52F200E9DDF3 /* trollformation39.png */; };
+		597F6AB0295B52F300E9DDF3 /* trollformation40.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A88295B52F300E9DDF3 /* trollformation40.png */; };
+		597F6AB1295B52F300E9DDF3 /* trollformation8.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A89295B52F300E9DDF3 /* trollformation8.png */; };
+		597F6AB2295B52F300E9DDF3 /* trollformation2.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A8A295B52F300E9DDF3 /* trollformation2.png */; };
+		597F6AB3295B52F300E9DDF3 /* trollformation32.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A8B295B52F300E9DDF3 /* trollformation32.png */; };
+		597F6AB4295B52F300E9DDF3 /* trollformation10.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A8C295B52F300E9DDF3 /* trollformation10.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +63,53 @@
 		597F69F0295B3DA700E9DDF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		597F69F2295B3DA800E9DDF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		597F69F5295B3DA800E9DDF3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		597F6A00295B428200E9DDF3 /* TrollLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrollLock.swift; sourceTree = "<group>"; };
+		597F6A04295B443F00E9DDF3 /* TrollLock.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TrollLock.xcassets; sourceTree = "<group>"; };
+		597F6A08295B4BA400E9DDF3 /* MacDirtyCow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacDirtyCow.h; sourceTree = "<group>"; };
+		597F6A09295B4C3700E9DDF3 /* TrollMods-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrollMods-Bridging-Header.h"; sourceTree = "<group>"; };
+		597F6A0A295B4C3800E9DDF3 /* MacDirtyCow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacDirtyCow.m; sourceTree = "<group>"; };
+		597F6A10295B4E5100E9DDF3 /* TrollLockPrepare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrollLockPrepare.m; sourceTree = "<group>"; };
+		597F6A12295B4E7900E9DDF3 /* TrollLockPrepare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrollLockPrepare.h; sourceTree = "<group>"; };
+		597F6A65295B52F100E9DDF3 /* trollformation27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation27.png; sourceTree = "<group>"; };
+		597F6A66295B52F100E9DDF3 /* trollformation6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation6.png; sourceTree = "<group>"; };
+		597F6A67295B52F100E9DDF3 /* trollformation25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation25.png; sourceTree = "<group>"; };
+		597F6A68295B52F100E9DDF3 /* trollformation37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation37.png; sourceTree = "<group>"; };
+		597F6A69295B52F100E9DDF3 /* trollformation34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation34.png; sourceTree = "<group>"; };
+		597F6A6A295B52F100E9DDF3 /* trollformation36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation36.png; sourceTree = "<group>"; };
+		597F6A6B295B52F100E9DDF3 /* trollformation11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation11.png; sourceTree = "<group>"; };
+		597F6A6C295B52F100E9DDF3 /* trollformation16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation16.png; sourceTree = "<group>"; };
+		597F6A6D295B52F100E9DDF3 /* trollformation23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation23.png; sourceTree = "<group>"; };
+		597F6A6E295B52F100E9DDF3 /* trollformation7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation7.png; sourceTree = "<group>"; };
+		597F6A6F295B52F100E9DDF3 /* trollformation12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation12.png; sourceTree = "<group>"; };
+		597F6A70295B52F100E9DDF3 /* trollformation31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation31.png; sourceTree = "<group>"; };
+		597F6A71295B52F100E9DDF3 /* trollformation9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation9.png; sourceTree = "<group>"; };
+		597F6A72295B52F100E9DDF3 /* trollformation30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation30.png; sourceTree = "<group>"; };
+		597F6A73295B52F100E9DDF3 /* trollformation13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation13.png; sourceTree = "<group>"; };
+		597F6A74295B52F100E9DDF3 /* trollformation14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation14.png; sourceTree = "<group>"; };
+		597F6A75295B52F100E9DDF3 /* trollformation15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation15.png; sourceTree = "<group>"; };
+		597F6A76295B52F100E9DDF3 /* trollformation21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation21.png; sourceTree = "<group>"; };
+		597F6A77295B52F100E9DDF3 /* trollformation3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation3.png; sourceTree = "<group>"; };
+		597F6A78295B52F100E9DDF3 /* trollformation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation1.png; sourceTree = "<group>"; };
+		597F6A79295B52F200E9DDF3 /* trollformation29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation29.png; sourceTree = "<group>"; };
+		597F6A7A295B52F200E9DDF3 /* trollformation20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation20.png; sourceTree = "<group>"; };
+		597F6A7B295B52F200E9DDF3 /* trollformation5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation5.png; sourceTree = "<group>"; };
+		597F6A7C295B52F200E9DDF3 /* trollformation35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation35.png; sourceTree = "<group>"; };
+		597F6A7D295B52F200E9DDF3 /* trollformation17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation17.png; sourceTree = "<group>"; };
+		597F6A7E295B52F200E9DDF3 /* trollformation38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation38.png; sourceTree = "<group>"; };
+		597F6A7F295B52F200E9DDF3 /* trollformation18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation18.png; sourceTree = "<group>"; };
+		597F6A80295B52F200E9DDF3 /* trollformation19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation19.png; sourceTree = "<group>"; };
+		597F6A81295B52F200E9DDF3 /* trollformation22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation22.png; sourceTree = "<group>"; };
+		597F6A82295B52F200E9DDF3 /* trollformation28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation28.png; sourceTree = "<group>"; };
+		597F6A83295B52F200E9DDF3 /* trollformation33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation33.png; sourceTree = "<group>"; };
+		597F6A84295B52F200E9DDF3 /* trollformation4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation4.png; sourceTree = "<group>"; };
+		597F6A85295B52F200E9DDF3 /* trollformation26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation26.png; sourceTree = "<group>"; };
+		597F6A86295B52F200E9DDF3 /* trollformation24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation24.png; sourceTree = "<group>"; };
+		597F6A87295B52F200E9DDF3 /* trollformation39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation39.png; sourceTree = "<group>"; };
+		597F6A88295B52F300E9DDF3 /* trollformation40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation40.png; sourceTree = "<group>"; };
+		597F6A89295B52F300E9DDF3 /* trollformation8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation8.png; sourceTree = "<group>"; };
+		597F6A8A295B52F300E9DDF3 /* trollformation2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation2.png; sourceTree = "<group>"; };
+		597F6A8B295B52F300E9DDF3 /* trollformation32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation32.png; sourceTree = "<group>"; };
+		597F6A8C295B52F300E9DDF3 /* trollformation10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation10.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +142,11 @@
 		597F69ED295B3DA700E9DDF3 /* TrollMods */ = {
 			isa = PBXGroup;
 			children = (
+				597F6A06295B4B8200E9DDF3 /* Exploits */,
+				597F69FC295B3EC500E9DDF3 /* Mods */,
 				597F69EE295B3DA700E9DDF3 /* TrollModsApp.swift */,
 				597F69F0295B3DA700E9DDF3 /* ContentView.swift */,
+				597F6A09295B4C3700E9DDF3 /* TrollMods-Bridging-Header.h */,
 				597F69F2295B3DA800E9DDF3 /* Assets.xcassets */,
 				597F69F4295B3DA800E9DDF3 /* Preview Content */,
 			);
@@ -65,6 +159,98 @@
 				597F69F5295B3DA800E9DDF3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		597F69FC295B3EC500E9DDF3 /* Mods */ = {
+			isa = PBXGroup;
+			children = (
+				597F69FD295B3EF300E9DDF3 /* TrollLock */,
+			);
+			path = Mods;
+			sourceTree = "<group>";
+		};
+		597F69FD295B3EF300E9DDF3 /* TrollLock */ = {
+			isa = PBXGroup;
+			children = (
+				597F6A13295B526B00E9DDF3 /* Formations */,
+				597F6A00295B428200E9DDF3 /* TrollLock.swift */,
+				597F6A04295B443F00E9DDF3 /* TrollLock.xcassets */,
+				597F6A10295B4E5100E9DDF3 /* TrollLockPrepare.m */,
+				597F6A12295B4E7900E9DDF3 /* TrollLockPrepare.h */,
+			);
+			path = TrollLock;
+			sourceTree = "<group>";
+		};
+		597F6A06295B4B8200E9DDF3 /* Exploits */ = {
+			isa = PBXGroup;
+			children = (
+				597F6A07295B4B9000E9DDF3 /* MacDirtyCow */,
+			);
+			path = Exploits;
+			sourceTree = "<group>";
+		};
+		597F6A07295B4B9000E9DDF3 /* MacDirtyCow */ = {
+			isa = PBXGroup;
+			children = (
+				597F6A08295B4BA400E9DDF3 /* MacDirtyCow.h */,
+				597F6A0A295B4C3800E9DDF3 /* MacDirtyCow.m */,
+			);
+			path = MacDirtyCow;
+			sourceTree = "<group>";
+		};
+		597F6A13295B526B00E9DDF3 /* Formations */ = {
+			isa = PBXGroup;
+			children = (
+				597F6A14295B527400E9DDF3 /* Default */,
+			);
+			path = Formations;
+			sourceTree = "<group>";
+		};
+		597F6A14295B527400E9DDF3 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				597F6A78295B52F100E9DDF3 /* trollformation1.png */,
+				597F6A8A295B52F300E9DDF3 /* trollformation2.png */,
+				597F6A77295B52F100E9DDF3 /* trollformation3.png */,
+				597F6A84295B52F200E9DDF3 /* trollformation4.png */,
+				597F6A7B295B52F200E9DDF3 /* trollformation5.png */,
+				597F6A66295B52F100E9DDF3 /* trollformation6.png */,
+				597F6A6E295B52F100E9DDF3 /* trollformation7.png */,
+				597F6A89295B52F300E9DDF3 /* trollformation8.png */,
+				597F6A71295B52F100E9DDF3 /* trollformation9.png */,
+				597F6A8C295B52F300E9DDF3 /* trollformation10.png */,
+				597F6A6B295B52F100E9DDF3 /* trollformation11.png */,
+				597F6A6F295B52F100E9DDF3 /* trollformation12.png */,
+				597F6A73295B52F100E9DDF3 /* trollformation13.png */,
+				597F6A74295B52F100E9DDF3 /* trollformation14.png */,
+				597F6A75295B52F100E9DDF3 /* trollformation15.png */,
+				597F6A6C295B52F100E9DDF3 /* trollformation16.png */,
+				597F6A7D295B52F200E9DDF3 /* trollformation17.png */,
+				597F6A7F295B52F200E9DDF3 /* trollformation18.png */,
+				597F6A80295B52F200E9DDF3 /* trollformation19.png */,
+				597F6A7A295B52F200E9DDF3 /* trollformation20.png */,
+				597F6A76295B52F100E9DDF3 /* trollformation21.png */,
+				597F6A81295B52F200E9DDF3 /* trollformation22.png */,
+				597F6A6D295B52F100E9DDF3 /* trollformation23.png */,
+				597F6A86295B52F200E9DDF3 /* trollformation24.png */,
+				597F6A67295B52F100E9DDF3 /* trollformation25.png */,
+				597F6A85295B52F200E9DDF3 /* trollformation26.png */,
+				597F6A65295B52F100E9DDF3 /* trollformation27.png */,
+				597F6A82295B52F200E9DDF3 /* trollformation28.png */,
+				597F6A79295B52F200E9DDF3 /* trollformation29.png */,
+				597F6A72295B52F100E9DDF3 /* trollformation30.png */,
+				597F6A70295B52F100E9DDF3 /* trollformation31.png */,
+				597F6A8B295B52F300E9DDF3 /* trollformation32.png */,
+				597F6A83295B52F200E9DDF3 /* trollformation33.png */,
+				597F6A69295B52F100E9DDF3 /* trollformation34.png */,
+				597F6A7C295B52F200E9DDF3 /* trollformation35.png */,
+				597F6A6A295B52F100E9DDF3 /* trollformation36.png */,
+				597F6A68295B52F100E9DDF3 /* trollformation37.png */,
+				597F6A7E295B52F200E9DDF3 /* trollformation38.png */,
+				597F6A87295B52F200E9DDF3 /* trollformation39.png */,
+				597F6A88295B52F300E9DDF3 /* trollformation40.png */,
+			);
+			path = Default;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +285,7 @@
 				TargetAttributes = {
 					597F69EA295B3DA700E9DDF3 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -125,8 +312,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597F6A95295B52F300E9DDF3 /* trollformation23.png in Resources */,
+				597F6AA3295B52F300E9DDF3 /* trollformation5.png in Resources */,
+				597F6AB1295B52F300E9DDF3 /* trollformation8.png in Resources */,
+				597F6A94295B52F300E9DDF3 /* trollformation16.png in Resources */,
+				597F6A92295B52F300E9DDF3 /* trollformation36.png in Resources */,
+				597F6A98295B52F300E9DDF3 /* trollformation31.png in Resources */,
+				597F6A8F295B52F300E9DDF3 /* trollformation25.png in Resources */,
+				597F6AAC295B52F300E9DDF3 /* trollformation4.png in Resources */,
+				597F6AA0295B52F300E9DDF3 /* trollformation1.png in Resources */,
+				597F6AA9295B52F300E9DDF3 /* trollformation22.png in Resources */,
+				597F6AA1295B52F300E9DDF3 /* trollformation29.png in Resources */,
+				597F6AA6295B52F300E9DDF3 /* trollformation38.png in Resources */,
+				597F6AB4295B52F300E9DDF3 /* trollformation10.png in Resources */,
+				597F6A8D295B52F300E9DDF3 /* trollformation27.png in Resources */,
+				597F6A93295B52F300E9DDF3 /* trollformation11.png in Resources */,
+				597F6A97295B52F300E9DDF3 /* trollformation12.png in Resources */,
+				597F6A91295B52F300E9DDF3 /* trollformation34.png in Resources */,
+				597F6A9B295B52F300E9DDF3 /* trollformation13.png in Resources */,
+				597F6AAB295B52F300E9DDF3 /* trollformation33.png in Resources */,
+				597F6AB3295B52F300E9DDF3 /* trollformation32.png in Resources */,
+				597F6A9C295B52F300E9DDF3 /* trollformation14.png in Resources */,
 				597F69F6295B3DA800E9DDF3 /* Preview Assets.xcassets in Resources */,
+				597F6A96295B52F300E9DDF3 /* trollformation7.png in Resources */,
+				597F6A9D295B52F300E9DDF3 /* trollformation15.png in Resources */,
+				597F6AA7295B52F300E9DDF3 /* trollformation18.png in Resources */,
+				597F6A99295B52F300E9DDF3 /* trollformation9.png in Resources */,
+				597F6AAA295B52F300E9DDF3 /* trollformation28.png in Resources */,
+				597F6AA4295B52F300E9DDF3 /* trollformation35.png in Resources */,
+				597F6AB2295B52F300E9DDF3 /* trollformation2.png in Resources */,
+				597F6AA5295B52F300E9DDF3 /* trollformation17.png in Resources */,
+				597F6A9E295B52F300E9DDF3 /* trollformation21.png in Resources */,
+				597F6AAD295B52F300E9DDF3 /* trollformation26.png in Resources */,
+				597F6A90295B52F300E9DDF3 /* trollformation37.png in Resources */,
+				597F6AAF295B52F300E9DDF3 /* trollformation39.png in Resources */,
+				597F6A05295B443F00E9DDF3 /* TrollLock.xcassets in Resources */,
 				597F69F3295B3DA800E9DDF3 /* Assets.xcassets in Resources */,
+				597F6AA8295B52F300E9DDF3 /* trollformation19.png in Resources */,
+				597F6AAE295B52F300E9DDF3 /* trollformation24.png in Resources */,
+				597F6A9F295B52F300E9DDF3 /* trollformation3.png in Resources */,
+				597F6A9A295B52F300E9DDF3 /* trollformation30.png in Resources */,
+				597F6AB0295B52F300E9DDF3 /* trollformation40.png in Resources */,
+				597F6AA2295B52F300E9DDF3 /* trollformation20.png in Resources */,
+				597F6A8E295B52F300E9DDF3 /* trollformation6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +367,9 @@
 			files = (
 				597F69F1295B3DA700E9DDF3 /* ContentView.swift in Sources */,
 				597F69EF295B3DA700E9DDF3 /* TrollModsApp.swift in Sources */,
+				597F6A0B295B4C3800E9DDF3 /* MacDirtyCow.m in Sources */,
+				597F6A11295B4E5100E9DDF3 /* TrollLockPrepare.m in Sources */,
+				597F6A02295B42E400E9DDF3 /* TrollLock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,16 +495,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrollMods/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TrollMods;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -281,7 +519,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.hex36.TrollMods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TrollMods/TrollMods-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -292,16 +536,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrollMods/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TrollMods;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,7 +560,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.hex36.TrollMods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TrollMods/TrollMods-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
