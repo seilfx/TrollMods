@@ -11,9 +11,8 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                /*
-                TODO: Fix TrollLock >:(
-                NavigationLink(destination: TrollMods.TrollLockView()) {
+                // TODO: Move to a for loop.
+                /*NavigationLink(destination: TrollMods.TrollLockView()) {
                     HStack {
                         Image("TrollLock")
                             .resizable()
@@ -22,8 +21,7 @@ struct ContentView: View {
                             .cornerRadius(8)
                         Text("TrollLock")
                     }
-                }
-                 */
+                }*/
                 
                 NavigationLink(destination: TrollMods.TrollFXView()) {
                     HStack {
@@ -37,6 +35,18 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("TrollMods")
+            
+            Button("Respring", action: {
+                Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
+                    guard let window = UIApplication.shared.windows.first else { return }
+                    while true {
+                        window.snapshotView(afterScreenUpdates: false)
+                    }
+                }
+            })
+            .buttonStyle(.bordered)
+            .controlSize(.large)
+            .tint(.red);
         }
     }
 }
