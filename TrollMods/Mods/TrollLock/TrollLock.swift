@@ -138,57 +138,6 @@ func TrollLockInjectIntoAnimation(lockPack: URL) -> String {
 	return xCaml;
 }
 
-func OverwriteFile(newFileData: Data, targetPath: String) -> Bool {
-	let fd = open(targetPath, O_RDONLY | O_CLOEXEC);
-	guard fd != -1 else {
-		print("Failed to read target lock path");
-		return false;
-	}
-	defer { close(fd) }
-	
-	let originalFileSize = lseek(fd, 0, SEEK_END);
-	guard originalFileSize >= newFileData.count else {
-		print("New file is too large");
-		return false;
-	}
-	lseek(fd, 0, SEEK_SET);
-	
-	let fileMap = mmap(nil, newFileData.count, PROT_READ, MAP_SHARED, fd, 0);
-	guard fileMap != MAP_FAILED else {
-		print("Map failed");
-		return false;
-	}
-	
-	guard mlock(fileMap, newFileData.count) == 0 else {
-		print("Mlock failed");
-		return false;
-	}
-	
-	for chunkOff in stride(from: 0, to: newFileData.count, by: 0x4000) {
-		let dataChunk = newFileData[chunkOff..<min(newFileData.count, chunkOff + 0x3ffe)];
-		var overwroteOne = false;
-		for _ in 0..<2 {
-			let overwriteSucceeded = dataChunk.withUnsafeBytes { dataChunkBytes in
-				print(dataChunkBytes.count);
-				return unaligned_copy_switch_race(
-					fd, Int64(chunkOff), dataChunkBytes.baseAddress, dataChunkBytes.count);
-			}
-			if overwriteSucceeded {
-				overwroteOne = true;
-				break;
-			}
-			print("Retrying...");
-			sleep(1);
-		}
-		guard overwroteOne else {
-			print("Failed to overwrite")
-			return false
-		}
-	}
-	print("Success");
-	return true;
-}
-
 func TrollLockLoadAndReplace(url: String) {
 	let task = URLSession.shared.downloadTask(with: URL(string: url)!) { data, response, error in
 		if let data = data {

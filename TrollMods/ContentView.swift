@@ -17,7 +17,19 @@ struct ContentView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 32)
+                            .cornerRadius(8)
                         Text("TrollLock")
+                    }
+                }
+                
+                NavigationLink(destination: TrollMods.TrollFXView()) {
+                    HStack {
+                        Image("TrollFX")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 32)
+                            .cornerRadius(8)
+                        Text("TrollFX")
                     }
                 }
             }
