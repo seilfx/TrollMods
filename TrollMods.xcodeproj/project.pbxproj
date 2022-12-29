@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590077F3295DC9D400A95DDA /* defaultLockAnimation.caml in Resources */ = {isa = PBXBuildFile; fileRef = 590077F2295DC9D400A95DDA /* defaultLockAnimation.caml */; };
 		597F69EF295B3DA700E9DDF3 /* TrollModsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F69EE295B3DA700E9DDF3 /* TrollModsApp.swift */; };
 		597F69F1295B3DA700E9DDF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F69F0295B3DA700E9DDF3 /* ContentView.swift */; };
 		597F69F3295B3DA800E9DDF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597F69F2295B3DA800E9DDF3 /* Assets.xcassets */; };
 		597F69F6295B3DA800E9DDF3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597F69F5295B3DA800E9DDF3 /* Preview Assets.xcassets */; };
 		597F6A02295B42E400E9DDF3 /* TrollLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F6A00295B428200E9DDF3 /* TrollLock.swift */; };
 		597F6A05295B443F00E9DDF3 /* TrollLock.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A04295B443F00E9DDF3 /* TrollLock.xcassets */; };
-		597F6A0B295B4C3800E9DDF3 /* MacDirtyCow.m in Sources */ = {isa = PBXBuildFile; fileRef = 597F6A0A295B4C3800E9DDF3 /* MacDirtyCow.m */; };
-		597F6A11295B4E5100E9DDF3 /* TrollLockPrepare.m in Sources */ = {isa = PBXBuildFile; fileRef = 597F6A10295B4E5100E9DDF3 /* TrollLockPrepare.m */; };
+		597F6A0B295B4C3800E9DDF3 /* vm_unaligned_copy_switch_race.m in Sources */ = {isa = PBXBuildFile; fileRef = 597F6A0A295B4C3800E9DDF3 /* vm_unaligned_copy_switch_race.m */; };
+		597F6A11295B4E5100E9DDF3 /* TrollLockCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 597F6A10295B4E5100E9DDF3 /* TrollLockCopy.m */; };
 		597F6A8D295B52F300E9DDF3 /* trollformation27.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A65295B52F100E9DDF3 /* trollformation27.png */; };
 		597F6A8E295B52F300E9DDF3 /* trollformation6.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A66295B52F100E9DDF3 /* trollformation6.png */; };
 		597F6A8F295B52F300E9DDF3 /* trollformation25.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A67295B52F100E9DDF3 /* trollformation25.png */; };
@@ -55,9 +56,11 @@
 		597F6AB2295B52F300E9DDF3 /* trollformation2.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A8A295B52F300E9DDF3 /* trollformation2.png */; };
 		597F6AB3295B52F300E9DDF3 /* trollformation32.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A8B295B52F300E9DDF3 /* trollformation32.png */; };
 		597F6AB4295B52F300E9DDF3 /* trollformation10.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A8C295B52F300E9DDF3 /* trollformation10.png */; };
+		597F6AB8295B8C0800E9DDF3 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 597F6AB7295B8C0800E9DDF3 /* Zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		590077F2295DC9D400A95DDA /* defaultLockAnimation.caml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = defaultLockAnimation.caml; sourceTree = "<group>"; };
 		597F69EB295B3DA700E9DDF3 /* TrollMods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrollMods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		597F69EE295B3DA700E9DDF3 /* TrollModsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrollModsApp.swift; sourceTree = "<group>"; };
 		597F69F0295B3DA700E9DDF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,11 +68,11 @@
 		597F69F5295B3DA800E9DDF3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		597F6A00295B428200E9DDF3 /* TrollLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrollLock.swift; sourceTree = "<group>"; };
 		597F6A04295B443F00E9DDF3 /* TrollLock.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TrollLock.xcassets; sourceTree = "<group>"; };
-		597F6A08295B4BA400E9DDF3 /* MacDirtyCow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacDirtyCow.h; sourceTree = "<group>"; };
+		597F6A08295B4BA400E9DDF3 /* vm_unaligned_copy_switch_race.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vm_unaligned_copy_switch_race.h; sourceTree = "<group>"; };
 		597F6A09295B4C3700E9DDF3 /* TrollMods-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrollMods-Bridging-Header.h"; sourceTree = "<group>"; };
-		597F6A0A295B4C3800E9DDF3 /* MacDirtyCow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacDirtyCow.m; sourceTree = "<group>"; };
-		597F6A10295B4E5100E9DDF3 /* TrollLockPrepare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrollLockPrepare.m; sourceTree = "<group>"; };
-		597F6A12295B4E7900E9DDF3 /* TrollLockPrepare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrollLockPrepare.h; sourceTree = "<group>"; };
+		597F6A0A295B4C3800E9DDF3 /* vm_unaligned_copy_switch_race.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vm_unaligned_copy_switch_race.m; sourceTree = "<group>"; };
+		597F6A10295B4E5100E9DDF3 /* TrollLockCopy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrollLockCopy.m; sourceTree = "<group>"; };
+		597F6A12295B4E7900E9DDF3 /* TrollLockCopy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrollLockCopy.h; sourceTree = "<group>"; };
 		597F6A65295B52F100E9DDF3 /* trollformation27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation27.png; sourceTree = "<group>"; };
 		597F6A66295B52F100E9DDF3 /* trollformation6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation6.png; sourceTree = "<group>"; };
 		597F6A67295B52F100E9DDF3 /* trollformation25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation25.png; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597F6AB8295B8C0800E9DDF3 /* Zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,14 +178,16 @@
 		597F69FD295B3EF300E9DDF3 /* TrollLock */ = {
 			isa = PBXGroup;
 			children = (
+				590077F2295DC9D400A95DDA /* defaultLockAnimation.caml */,
 				597F6A13295B526B00E9DDF3 /* Formations */,
 				597F6A00295B428200E9DDF3 /* TrollLock.swift */,
 				597F6A04295B443F00E9DDF3 /* TrollLock.xcassets */,
-				597F6A10295B4E5100E9DDF3 /* TrollLockPrepare.m */,
-				597F6A12295B4E7900E9DDF3 /* TrollLockPrepare.h */,
+				597F6A10295B4E5100E9DDF3 /* TrollLockCopy.m */,
+				597F6A12295B4E7900E9DDF3 /* TrollLockCopy.h */,
 			);
 			path = TrollLock;
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		597F6A06295B4B8200E9DDF3 /* Exploits */ = {
 			isa = PBXGroup;
@@ -194,8 +200,8 @@
 		597F6A07295B4B9000E9DDF3 /* MacDirtyCow */ = {
 			isa = PBXGroup;
 			children = (
-				597F6A08295B4BA400E9DDF3 /* MacDirtyCow.h */,
-				597F6A0A295B4C3800E9DDF3 /* MacDirtyCow.m */,
+				597F6A08295B4BA400E9DDF3 /* vm_unaligned_copy_switch_race.h */,
+				597F6A0A295B4C3800E9DDF3 /* vm_unaligned_copy_switch_race.m */,
 			);
 			path = MacDirtyCow;
 			sourceTree = "<group>";
@@ -271,6 +277,9 @@
 			dependencies = (
 			);
 			name = TrollMods;
+			packageProductDependencies = (
+				597F6AB7295B8C0800E9DDF3 /* Zip */,
+			);
 			productName = TrollMods;
 			productReference = 597F69EB295B3DA700E9DDF3 /* TrollMods.app */;
 			productType = "com.apple.product-type.application";
@@ -300,6 +309,9 @@
 				Base,
 			);
 			mainGroup = 597F69E2295B3DA700E9DDF3;
+			packageReferences = (
+				597F6AB6295B8C0800E9DDF3 /* XCRemoteSwiftPackageReference "Zip" */,
+			);
 			productRefGroup = 597F69EC295B3DA700E9DDF3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,6 +352,7 @@
 				597F6A9D295B52F300E9DDF3 /* trollformation15.png in Resources */,
 				597F6AA7295B52F300E9DDF3 /* trollformation18.png in Resources */,
 				597F6A99295B52F300E9DDF3 /* trollformation9.png in Resources */,
+				590077F3295DC9D400A95DDA /* defaultLockAnimation.caml in Resources */,
 				597F6AAA295B52F300E9DDF3 /* trollformation28.png in Resources */,
 				597F6AA4295B52F300E9DDF3 /* trollformation35.png in Resources */,
 				597F6AB2295B52F300E9DDF3 /* trollformation2.png in Resources */,
@@ -369,8 +382,8 @@
 			files = (
 				597F69F1295B3DA700E9DDF3 /* ContentView.swift in Sources */,
 				597F69EF295B3DA700E9DDF3 /* TrollModsApp.swift in Sources */,
-				597F6A0B295B4C3800E9DDF3 /* MacDirtyCow.m in Sources */,
-				597F6A11295B4E5100E9DDF3 /* TrollLockPrepare.m in Sources */,
+				597F6A0B295B4C3800E9DDF3 /* vm_unaligned_copy_switch_race.m in Sources */,
+				597F6A11295B4E5100E9DDF3 /* TrollLockCopy.m in Sources */,
 				597F6A02295B42E400E9DDF3 /* TrollLock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,6 +608,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		597F6AB6295B8C0800E9DDF3 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		597F6AB7295B8C0800E9DDF3 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 597F6AB6295B8C0800E9DDF3 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 597F69E3295B3DA700E9DDF3 /* Project object */;
 }
