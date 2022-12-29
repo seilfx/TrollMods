@@ -11,6 +11,8 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
+                /*
+                TODO: Fix TrollLock >:(
                 NavigationLink(destination: TrollMods.TrollLockView()) {
                     HStack {
                         Image("TrollLock")
@@ -21,6 +23,7 @@ struct ContentView: View {
                         Text("TrollLock")
                     }
                 }
+                 */
                 
                 NavigationLink(destination: TrollMods.TrollFXView()) {
                     HStack {
