@@ -21,7 +21,7 @@ struct TrollFXView: View {
             Text("TrollFX")
                 .font(.title)
                 .fontWeight(.bold)
-            Button("Replace Lock Sound", action: OverWriteLockSoundWithFart)
+            Button("Replace Charge Sound ;D", action: OverWriteLockSoundWithFart)
                 .controlSize(.large)
                 .tint(.blue)
                 .buttonStyle(.bordered)
