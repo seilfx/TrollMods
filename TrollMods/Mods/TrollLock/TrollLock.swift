@@ -124,7 +124,7 @@ func TrollLockReplace(path: URL) {
 func TrollLockInjectIntoAnimation(lockPack: URL) -> String {
 	var xCaml: String = "";
 	do {
-		let defaultAnimation = Bundle.main.url(forResource: "defaultLockAnimation", withExtension: "caml")!;
+		let defaultAnimation = Bundle.main.url(forResource: "baseLockAnimation", withExtension: "caml")!;
 		xCaml = try String(contentsOf: defaultAnimation, encoding: .utf8).replacingOccurrences(of: "\\B\\s+|\\s+\\B", with: "", options: .regularExpression);
 	} catch {
 		print("Failed to load default lock animation: \(error)");
