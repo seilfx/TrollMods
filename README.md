@@ -5,7 +5,7 @@ Collection of mods based on the [MacDirtyCow exploit](https://github.com/zhuowei
 You may be wondering, why install this, when I can install the original tweaks from their original creators? While you can do that, it's important to note that regular users are limited to three sideloaded apps. TrollMods collects these tweaks into one app, allowing the user to sideload two other apps of their choice. :)
  
 # TrollMods
-* [TrollLock](https://github.com/haxi0/TrollLock-Reborn) by [Haxi0](https://github.com/haxi0). [CURRENTLY DISABLED; DOES NOT WORK]
+* [TrollLock](https://github.com/haxi0/TrollLock-Reborn) by [Haxi0](https://github.com/haxi0).
 * TrollFX by [aethercot](https://github.com/aethercot).
  
 # Credits

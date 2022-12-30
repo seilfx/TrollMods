@@ -20,7 +20,6 @@
 		597F6A02295B42E400E9DDF3 /* TrollLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F6A00295B428200E9DDF3 /* TrollLock.swift */; };
 		597F6A05295B443F00E9DDF3 /* TrollLock.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A04295B443F00E9DDF3 /* TrollLock.xcassets */; };
 		597F6A0B295B4C3800E9DDF3 /* vm_unaligned_copy_switch_race.c in Sources */ = {isa = PBXBuildFile; fileRef = 597F6A0A295B4C3800E9DDF3 /* vm_unaligned_copy_switch_race.c */; };
-		597F6A11295B4E5100E9DDF3 /* TrollLockCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 597F6A10295B4E5100E9DDF3 /* TrollLockCopy.m */; };
 		597F6A8D295B52F300E9DDF3 /* trollformation27.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A65295B52F100E9DDF3 /* trollformation27.png */; };
 		597F6A8E295B52F300E9DDF3 /* trollformation6.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A66295B52F100E9DDF3 /* trollformation6.png */; };
 		597F6A8F295B52F300E9DDF3 /* trollformation25.png in Resources */ = {isa = PBXBuildFile; fileRef = 597F6A67295B52F100E9DDF3 /* trollformation25.png */; };
@@ -81,8 +80,6 @@
 		597F6A08295B4BA400E9DDF3 /* vm_unaligned_copy_switch_race.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vm_unaligned_copy_switch_race.h; sourceTree = "<group>"; };
 		597F6A09295B4C3700E9DDF3 /* TrollMods-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrollMods-Bridging-Header.h"; sourceTree = "<group>"; };
 		597F6A0A295B4C3800E9DDF3 /* vm_unaligned_copy_switch_race.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vm_unaligned_copy_switch_race.c; sourceTree = "<group>"; };
-		597F6A10295B4E5100E9DDF3 /* TrollLockCopy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrollLockCopy.m; sourceTree = "<group>"; };
-		597F6A12295B4E7900E9DDF3 /* TrollLockCopy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrollLockCopy.h; sourceTree = "<group>"; };
 		597F6A65295B52F100E9DDF3 /* trollformation27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation27.png; sourceTree = "<group>"; };
 		597F6A66295B52F100E9DDF3 /* trollformation6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation6.png; sourceTree = "<group>"; };
 		597F6A67295B52F100E9DDF3 /* trollformation25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollformation25.png; sourceTree = "<group>"; };
@@ -157,6 +154,13 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		596844A3295F7C60009EF84B /* WDBFontOverwrite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WDBFontOverwrite;
+			sourceTree = "<group>";
+		};
 		597F69E2295B3DA700E9DDF3 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +205,7 @@
 		597F69FC295B3EC500E9DDF3 /* Mods */ = {
 			isa = PBXGroup;
 			children = (
+				596844A3295F7C60009EF84B /* WDBFontOverwrite */,
 				590077FC295E130C00A95DDA /* TrollFX */,
 				597F69FD295B3EF300E9DDF3 /* TrollLock */,
 			);
@@ -214,8 +219,6 @@
 				597F6A13295B526B00E9DDF3 /* Formations */,
 				597F6A00295B428200E9DDF3 /* TrollLock.swift */,
 				597F6A04295B443F00E9DDF3 /* TrollLock.xcassets */,
-				597F6A10295B4E5100E9DDF3 /* TrollLockCopy.m */,
-				597F6A12295B4E7900E9DDF3 /* TrollLockCopy.h */,
 			);
 			path = TrollLock;
 			sourceTree = "<group>";
@@ -403,7 +406,6 @@
 				597F69EF295B3DA700E9DDF3 /* TrollModsApp.swift in Sources */,
 				597F6A0B295B4C3800E9DDF3 /* vm_unaligned_copy_switch_race.c in Sources */,
 				59007802295E130C00A95DDA /* TrollFXView.swift in Sources */,
-				597F6A11295B4E5100E9DDF3 /* TrollLockCopy.m in Sources */,
 				597F6A02295B42E400E9DDF3 /* TrollLock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

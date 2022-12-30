@@ -11,7 +11,6 @@ struct MainView: View {
     var body: some View {
         List {
             // TODO: Move to a for loop.
-            /*
             NavigationLink(destination: TrollMods.TrollLockView()) {
                 HStack {
                     Image("TrollLock")
@@ -22,7 +21,6 @@ struct MainView: View {
                     Text("TrollLock")
                 }
             }
-             */
             
             NavigationLink(destination: TrollMods.TrollFXView()) {
                 HStack {

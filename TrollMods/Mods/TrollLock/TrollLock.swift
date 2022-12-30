@@ -101,8 +101,6 @@ func TrollLockReplace(path: URL) {
 			print("Failed to write lock pack main.caml to documents directory: \(error)");
 		}
 		
-		//TrollLockCopy(sourceFilePath.absoluteString, targetPath);
-		
 		let success = OverwriteFile(newFileData: lockPackCamlContents.data(using: .utf8)!, targetPath: targetPath);
 		print("Success: \(success)");
 		
@@ -115,6 +113,7 @@ func TrollLockReplace(path: URL) {
 			print("-- start new --");
 			print(mainCamlContents);
 			print("--- end new ---");
+			print("size new: \(mainCamlContents.count)");
 		} catch {
 			print(error);
 		}
@@ -125,13 +124,14 @@ func TrollLockInjectIntoAnimation(lockPack: URL) -> String {
 	var xCaml: String = "";
 	do {
 		let defaultAnimation = Bundle.main.url(forResource: "baseLockAnimation", withExtension: "caml")!;
-		xCaml = try String(contentsOf: defaultAnimation, encoding: .utf8).replacingOccurrences(of: "\\B\\s+|\\s+\\B", with: "", options: .regularExpression);
+		xCaml = try String(contentsOf: defaultAnimation, encoding: .utf8); //.replacingOccurrences(of: "\\B\\s+|\\s+\\B", with: "", options: .regularExpression);
 	} catch {
 		print("Failed to load default lock animation: \(error)");
 	}
 	
 	for i in 1...40 {
 		let trollFile = lockPack.appendingPathComponent("trollformation\(i).png").absoluteString.replacingOccurrences(of: "file://", with: "");
+		print(trollFile);
 		xCaml = xCaml.replacingOccurrences(of: "trolling\(i)x", with: trollFile);
 	}
 	
@@ -203,16 +203,16 @@ struct TrollLockView: View {
 						secondaryButton: .destructive(
 							Text("Begin"),
 							action: {
-								showCustomPackPrompt = true;
+								showLoadCustomPackPrompt = true; //showCustomPackPrompt = true;
 							}
 						)
 					)
 				}
-				.alert("Which lock pack to use?", isPresented: $showCustomPackPrompt) {
-					Button("Use last", action: { showCustomPackPrompt = false })
+				/*.alert("Which lock pack to use?", isPresented: $showCustomPackPrompt) {
+					//Button("Use last", action: { showCustomPackPrompt = false })
 					Button("Use custom from URL", action: { showLoadCustomPackPrompt = true })
 					// Button("Use default (Trollface)", action: { TrollLockReplace(path: ) })
-				}
+				}*/
 				.alert("Load lock pack from URL", isPresented: $showLoadCustomPackPrompt, actions: {
 					TextField("Pack URL", text: $customPackURL)
 					Button("Load", action: { TrollLockLoadAndReplace(url: customPackURL) })
