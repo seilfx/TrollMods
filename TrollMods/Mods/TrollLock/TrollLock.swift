@@ -9,8 +9,15 @@ import SwiftUI
 import Zip
 
 private let trollLockVersion: String = "v1.0";
+private let globalLockPaths: [String] = [
+	"3x-d73",
+	"3x-896h",
+	"3x-812h",
+	"2x-896h",
+	"2x-812h",
+];
 private let deviceLockPath: [String: String] = [
-	"iPhone15,3": "3x-896h", // iPhone 14 Pro Max 3x-d73
+	"iPhone15,3": "3x-896h", // iPhone 14 Pro Max 3x-d73?
 	"iPhone15,2": "3x-d73", // iPhone 14 Pro
 	"iPhone14,7": "3x-812h", // iPhone 14
 	
@@ -51,24 +58,17 @@ extension UIDevice {
 	}
 }
 
-func TrollLockReplace(path: URL) {
+func TrollLockReplace(path: URL, targetLockPath: String) {
 	DispatchQueue.global(qos: .userInteractive).async {
-		let targetLockPath = deviceLockPath[UIDevice.current.modelName];
-		
-		guard targetLockPath != nil else {
-			debugPrint(targetLockPath ?? "NONE");
-			return print("Device (\(UIDevice.current.modelName)) unsupported!");
-		}
-		
 		// /var/mobile/Containers/Data/Application//Documents/TrollLock/main.caml
 		let sourceFilePath = path.appendingPathComponent("main.caml");
 		print(sourceFilePath);
 		
-		let targetPath = "/System/Library/PrivateFrameworks/SpringBoardUIServices.framework/lock@\(targetLockPath!).ca/main.caml";
+		let targetPath = "/System/Library/PrivateFrameworks/SpringBoardUIServices.framework/lock@\(targetLockPath).ca/main.caml";
 		debugPrint(targetPath);
 		
 		do {
-			let files = try FileManager.default.contentsOfDirectory(atPath: "/System/Library/PrivateFrameworks/SpringBoardUIServices.framework/lock@\(targetLockPath!).ca/");
+			let files = try FileManager.default.contentsOfDirectory(atPath: "/System/Library/PrivateFrameworks/SpringBoardUIServices.framework/lock@\(targetLockPath).ca/");
 			debugPrint(files);
 			
 			let mainCamlContents = try String(contentsOf: URL.init(fileURLWithPath: targetPath), encoding: .utf8);
@@ -82,14 +82,14 @@ func TrollLockReplace(path: URL) {
 		
 		
 		/* TODO: Load custom animation file from lockpack.zip
-		var lockPackCamlContents: Data;
-		
-		do {
-			lockPackCamlContents = try Data(contentsOf: path.appendingPathComponent("main.caml"));
-		} catch {
-			lockPackCamlContents = mainCaml.data(using: .utf8)!
-		}
-		*/
+		 var lockPackCamlContents: Data;
+		 
+		 do {
+		 lockPackCamlContents = try Data(contentsOf: path.appendingPathComponent("main.caml"));
+		 } catch {
+		 lockPackCamlContents = mainCaml.data(using: .utf8)!
+		 }
+		 */
 		
 		
 		let lockPackCamlContents = TrollLockInjectIntoAnimation(lockPack: path);
@@ -105,7 +105,7 @@ func TrollLockReplace(path: URL) {
 		print("Success: \(success)");
 		
 		do {
-			let files = try FileManager.default.contentsOfDirectory(atPath: "/System/Library/PrivateFrameworks/SpringBoardUIServices.framework/lock@\(targetLockPath!).ca/");
+			let files = try FileManager.default.contentsOfDirectory(atPath: "/System/Library/PrivateFrameworks/SpringBoardUIServices.framework/lock@\(targetLockPath).ca/");
 			debugPrint(files);
 			
 			let mainCamlContents = try String(contentsOf: URL.init(fileURLWithPath: targetPath), encoding: .utf8);
@@ -138,7 +138,7 @@ func TrollLockInjectIntoAnimation(lockPack: URL) -> String {
 	return xCaml;
 }
 
-func TrollLockLoadAndReplace(url: String) {
+func TrollLockLoadAndReplace(url: String, targetLockPath: String) {
 	let task = URLSession.shared.downloadTask(with: URL(string: url)!) { data, response, error in
 		if let data = data {
 			debugPrint(data);
@@ -161,7 +161,7 @@ func TrollLockLoadAndReplace(url: String) {
 				try Zip.unzipFile(dataZip, destination: filePath, overwrite: true, password: nil);
 				print("Unzipped!");
 				
-				TrollLockReplace(path: filePath);
+				TrollLockReplace(path: filePath, targetLockPath: targetLockPath);
 			} catch {
 				debugPrint("Failed to move or unzip file: \(error)");
 			}
@@ -175,10 +175,13 @@ func TrollLockLoadAndReplace(url: String) {
 struct TrollLockView: View {
 	@State private var showInfoPrompt = false;
 	@State private var showTweakPrompt = false;
+	@State private var showFolderPrompt = false;
 	@State private var showCustomPackPrompt = false;
 	@State private var showLoadCustomPackPrompt = false;
 	
 	@State private var customPackURL = "https://github.com/Gluki0/icons-for-TrollLock/releases/download/icons/windowshello.zip";
+	
+	@State private var targetLockPath = deviceLockPath[UIDevice.current.modelName];
 	
 	var body: some View {
 		VStack {
@@ -203,19 +206,30 @@ struct TrollLockView: View {
 						secondaryButton: .destructive(
 							Text("Begin"),
 							action: {
-								showLoadCustomPackPrompt = true; //showCustomPackPrompt = true;
+								showFolderPrompt = true;
 							}
 						)
 					)
 				}
-				/*.alert("Which lock pack to use?", isPresented: $showCustomPackPrompt) {
+				.confirmationDialog("Devices have multiple lock folders, but only one must be modified. Based on your device the best choice is \(targetLockPath ?? "unknown. Try each folder and respring between each try until you find the one that works for you").",
+									isPresented: $showFolderPrompt,
+									titleVisibility: .visible,
+									actions: {
+					ForEach(globalLockPaths, id: \.self) { folder in
+						Button(folder, action: {
+							targetLockPath = folder;
+							showCustomPackPrompt = true;
+						});
+					}
+				})
+				.alert("Which lock pack to use?", isPresented: $showCustomPackPrompt) {
 					//Button("Use last", action: { showCustomPackPrompt = false })
 					Button("Use custom from URL", action: { showLoadCustomPackPrompt = true })
-					// Button("Use default (Trollface)", action: { TrollLockReplace(path: ) })
-				}*/
+					Button("Use default (Trollface)", action: { TrollLockReplace(path: Bundle.main.resourceURL!, targetLockPath: targetLockPath!) })
+				}
 				.alert("Load lock pack from URL", isPresented: $showLoadCustomPackPrompt, actions: {
 					TextField("Pack URL", text: $customPackURL)
-					Button("Load", action: { TrollLockLoadAndReplace(url: customPackURL) })
+					Button("Load", action: { TrollLockLoadAndReplace(url: customPackURL, targetLockPath: targetLockPath!) })
 					Button("Cancel", role: .cancel, action: {})
 				})
 		}
