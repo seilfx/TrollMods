@@ -227,7 +227,7 @@ struct TrollLockView: View {
 				.alert("Which lock pack to use?", isPresented: $showCustomPackPrompt) {
 					//Button("Use last", action: { showCustomPackPrompt = false })
 					Button("Use custom from URL", action: { showLoadCustomPackPrompt = true })
-					Button("Use default (Trollface)", action: { TrollLockReplace(path: Bundle.main.resourceURL!, targetLockPath: targetLockPath!) })
+					Button("Use default (Trollface)", action: { TrollLockReplace(path: Bundle.main.resourceURL!, targetLockPath: targetLockPath) })
 				}
 				.alert("Load lock pack from URL", isPresented: $showLoadCustomPackPrompt, actions: {
 					TextField("Pack URL", text: $customPackURL)
