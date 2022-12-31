@@ -35,7 +35,7 @@ private let deviceLockPath: [String: String] = [
 	"iPhone12,3": "2x-896h", // iPhone 11 Pro
 	"iPhone12,1": "2x-812h", // iPhone 11
 	
-	"iPhone11,8": "2x-896h", // iPhone XR
+	"iPhone11,8": "2x-812h", // iPhone XR
 	"iPhone11,4": "3x-896h", // iPhone XS Max (China)
 	"iPhone11,6": "3x-896h", // iPhone XS Max
 	"iPhone11,2": "3x-812h", // iPhone XS
@@ -181,7 +181,9 @@ struct TrollLockView: View {
 	
 	@State private var customPackURL = "https://github.com/Gluki0/icons-for-TrollLock/releases/download/icons/windowshello.zip";
 	
-	@State private var targetLockPath = deviceLockPath[UIDevice.current.modelName];
+	@State private var targetLockPath = "";
+	
+	private let lockPathRecommendation = deviceLockPath[UIDevice.current.modelName];
 	
 	var body: some View {
 		VStack {
@@ -211,7 +213,7 @@ struct TrollLockView: View {
 						)
 					)
 				}
-				.confirmationDialog("Devices have multiple lock folders, but only one must be modified. Based on your device the best choice is \(targetLockPath ?? "unknown. Try each folder and respring between each try until you find the one that works for you").",
+				.confirmationDialog("Devices have multiple lock folders, but only one must be modified. Based on your device the best choice is \(lockPathRecommendation ?? "unknown. Try each folder and respring between each try until you find the one that works for you").",
 									isPresented: $showFolderPrompt,
 									titleVisibility: .visible,
 									actions: {
@@ -229,7 +231,7 @@ struct TrollLockView: View {
 				}
 				.alert("Load lock pack from URL", isPresented: $showLoadCustomPackPrompt, actions: {
 					TextField("Pack URL", text: $customPackURL)
-					Button("Load", action: { TrollLockLoadAndReplace(url: customPackURL, targetLockPath: targetLockPath!) })
+					Button("Load", action: { TrollLockLoadAndReplace(url: customPackURL, targetLockPath: targetLockPath) })
 					Button("Cancel", role: .cancel, action: {})
 				})
 		}
