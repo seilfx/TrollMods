@@ -104,12 +104,17 @@ struct FileList: View {
                                 values.append("\(value)")
                                 types.append("\(type(of: value))")
                             }
-                            /*let vc = UIHostingController(rootView: PlistEditorView(path: path + file.name, plist: plist, keys: keys, values: values, types: types))
-                             UIApplication.shared.windows.first?.rootViewController?.present(vc, animated: true, completion: nil)*/
+                            let vc = UIHostingController(rootView: PlistEditorView(path: path + file.name, plist: plist, keys: keys, values: values, types: types))
+                            UIApplication.shared.windows.first?.rootViewController?.present(vc, animated: true, completion: nil)
                         } else {
+                            print(path + file.name)
+                            let data = FileManager.default.contents(atPath: path + file.name)
+                            let dataString = String(decoding: data!, as: UTF8.self)
+                            print(dataString)
+                            
                             // use TextEditor to edit the file
-                            /*let vc = UIHostingController(rootView: TextEditorView(path: path + file.name))
-                             UIApplication.shared.windows.first?.rootViewController?.present(vc, animated: true, completion: nil)*/
+                            let vc = UIHostingController(rootView: TextEditorView(path: path + file.name))
+                            UIApplication.shared.windows.first?.rootViewController?.present(vc, animated: true, completion: nil)
                         }
                     }) {
                         ListItem(file: file)
@@ -141,6 +146,230 @@ struct FileList: View {
                 }
             }
             .onAppear(perform: { loadDirectory(refreshDirectory: false) })
+        }
+    }
+}
+
+struct PlistEditorView: View {
+    @State var path: String
+    @State var plist: [String: Any] = [:]
+    @State var keys: [String] = []
+    @State var values: [String] = []
+    @State var types: [String] = []
+    @State var newKey: String = ""
+    @State var newValue: String = ""
+    @State var newType: String = "String"
+    @State var showAdd: Bool = false
+    @State var showEdit: Bool = false
+    @State var editIndex: Int = 0
+    @State var showDelete: Bool = false
+    @State var deleteIndex: Int = 0
+    var body: some View {
+        VStack {
+            List {
+                ForEach(keys.indices, id: \.self) { index in
+                    HStack {
+                        // check if they're in range
+                        if index < keys.count && index < values.count && index < types.count {
+                            Text(keys[index])
+                                .font(.headline)
+                            Spacer()
+                            Text(values[index])
+                                .font(.subheadline)
+                            Text(types[index])
+                                .font(.subheadline)
+                        }
+                    }
+                    .onTapGesture {
+                        showEdit = true
+                        editIndex = index
+                    }
+                    .contextMenu {
+                        Button(action: {
+                            showEdit = true
+                            editIndex = index
+                        }) {
+                            Text("Edit")
+                        }
+                        Button(action: {
+                            showDelete = true
+                            deleteIndex = index
+                        }) {
+                            Text("Delete")
+                        }
+                    }
+                }
+            }
+            .sheet(isPresented: $showAdd) {
+                VStack {
+                    Text("Add Key")
+                        .font(.title)
+                    TextField("Key", text: $newKey)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    TextField("Value", text: $newValue)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Picker("Type", selection: $newType) {
+                        Text("String").tag("String")
+                        Text("Integer").tag("Integer")
+                        Text("Boolean").tag("Boolean")
+                        Text("Float").tag("Float")
+                        Text("Double").tag("Double")
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    Button(action: {
+                        if newKey != "" && newValue != "" {
+                            keys.append(newKey)
+                            values.append(newValue)
+                            types.append(newType)
+                            newKey = ""
+                            newValue = ""
+                            newType = "String"
+                            showAdd = false
+                        }
+                    }) {
+                        Text("Add")
+                    }
+                }
+                .padding()
+            }
+            .sheet(isPresented: $showEdit) {
+                VStack {
+                    Text("Edit Key")
+                        .font(.title)
+                    TextField("Key", text: $keys[editIndex])
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    TextField("Value", text: $values[editIndex])
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Picker("Type", selection: $types[editIndex]) {
+                        Text("String").tag("String")
+                        Text("Integer").tag("Integer")
+                        Text("Boolean").tag("Boolean")
+                        Text("Float").tag("Float")
+                        Text("Double").tag("Double")
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    Button(action: {
+                        showEdit = false
+                    }) {
+                        Text("Done")
+                    }
+                }
+                .padding()
+            }
+            .alert(isPresented: $showDelete) {
+                Alert(title: Text("Delete Key"), message: Text("Are you sure you want to delete the key \(keys[deleteIndex])?"), primaryButton: .destructive(Text("Delete")) {
+                    keys.remove(at: deleteIndex)
+                    values.remove(at: deleteIndex)
+                    types.remove(at: deleteIndex)
+                    showDelete = false
+                }, secondaryButton: .cancel())
+            }
+            HStack {
+                Button(action: {
+                    showAdd = true
+                }) {
+                    Text("Add")
+                }
+                Spacer()
+                Button(action: {
+                    // save the plist
+                    for index in keys.indices {
+                        if types[index] == "String" {
+                            plist[keys[index]] = values[index]
+                        } else if types[index] == "Integer" {
+                            plist[keys[index]] = Int(values[index])
+                        } else if types[index] == "Boolean" {
+                            plist[keys[index]] = Bool(values[index])
+                        } else if types[index] == "Float" {
+                            plist[keys[index]] = Float(values[index])
+                        } else if types[index] == "Double" {
+                            plist[keys[index]] = Double(values[index])
+                        }
+                    }
+                    let data = try! PropertyListSerialization.data(fromPropertyList: plist, format: .xml, options: 0)
+                    // use the CVE to write the file
+                    if (OverwriteFile(newFileData: data, targetPath: path)) {
+                        // alert the user that the file was saved
+                        let alert = UIAlertController(title: "Success", message: "The file was saved successfully.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
+                    } else {
+                        // alert the user that the file was not saved
+                        let alert = UIAlertController(title: "Error", message: "The file was not saved successfully.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
+                    }
+                }) {
+                    Text("Save")
+                }
+            }
+        }
+        .onAppear {
+            let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+            plist = try! PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [String: Any]
+            for (key, value) in plist {
+                keys.append(key)
+                if value is String {
+                    values.append(value as! String)
+                    types.append("String")
+                } else if value is Int {
+                    values.append(String(value as! Int))
+                    types.append("Integer")
+                } else if value is Bool {
+                    values.append(String(value as! Bool))
+                    types.append("Boolean")
+                } else if value is Float {
+                    values.append(String(value as! Float))
+                    types.append("Float")
+                } else if value is Double {
+                    values.append(String(value as! Double))
+                    types.append("Double")
+                }
+            }
+        }
+    }
+}
+
+// TextEditorView, a view that allows the user to edit a file if it isn't a plist
+struct TextEditorView: View {
+    @State var path: String
+    @State var text: String = ""
+    var body: some View {
+        VStack {
+            TextEditor(text: $text)
+                .padding()
+            HStack {
+                Spacer()
+                Button(action: {
+                    // save the file
+                    let data = text.data(using: .utf8)!
+                    // use the CVE to write the file
+                    if (OverwriteFile(newFileData: data, targetPath: path)) {
+                        // alert the user that the file was saved
+                        let alert = UIAlertController(title: "Success", message: "The file was saved successfully.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
+                    } else {
+                        // alert the user that the file was not saved
+                        let alert = UIAlertController(title: "Error", message: "The file was not saved successfully.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
+                    }
+                }) {
+                    Text("Save")
+                }
+            }
+        }
+        .onAppear {
+            do {
+                text = try String(contentsOf: URL(fileURLWithPath: path), encoding: .utf8)
+            } catch {
+                let alert = UIAlertController(title: "Error", message: "The file could not be opened.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: true, completion: {
+                    UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
+                })
+            }
         }
     }
 }
