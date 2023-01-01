@@ -13,6 +13,9 @@
 		59007807295E19D000A95DDA /* fart.caf in Resources */ = {isa = PBXBuildFile; fileRef = 59007806295E19CC00A95DDA /* fart.caf */; };
 		59007809295E1F5100A95DDA /* TrollFX.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59007808295E1F5100A95DDA /* TrollFX.xcassets */; };
 		5900780B295E21FF00A95DDA /* Overwrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5900780A295E21FF00A95DDA /* Overwrite.swift */; };
+		596844A829609E60009EF84B /* FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596844A729609E60009EF84B /* FilesView.swift */; };
+		596844AA29609E78009EF84B /* ModsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596844A929609E78009EF84B /* ModsView.swift */; };
+		596844AD2960CE93009EF84B /* FilesImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596844AC2960CE93009EF84B /* FilesImpl.swift */; };
 		597F69EF295B3DA700E9DDF3 /* TrollModsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F69EE295B3DA700E9DDF3 /* TrollModsApp.swift */; };
 		597F69F1295B3DA700E9DDF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F69F0295B3DA700E9DDF3 /* ContentView.swift */; };
 		597F69F3295B3DA800E9DDF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597F69F2295B3DA800E9DDF3 /* Assets.xcassets */; };
@@ -70,6 +73,9 @@
 		59007806295E19CC00A95DDA /* fart.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fart.caf; sourceTree = "<group>"; };
 		59007808295E1F5100A95DDA /* TrollFX.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TrollFX.xcassets; sourceTree = "<group>"; };
 		5900780A295E21FF00A95DDA /* Overwrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overwrite.swift; sourceTree = "<group>"; };
+		596844A729609E60009EF84B /* FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesView.swift; sourceTree = "<group>"; };
+		596844A929609E78009EF84B /* ModsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModsView.swift; sourceTree = "<group>"; };
+		596844AC2960CE93009EF84B /* FilesImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesImpl.swift; sourceTree = "<group>"; };
 		597F69EB295B3DA700E9DDF3 /* TrollMods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrollMods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		597F69EE295B3DA700E9DDF3 /* TrollModsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrollModsApp.swift; sourceTree = "<group>"; };
 		597F69F0295B3DA700E9DDF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -161,6 +167,24 @@
 			path = WDBFontOverwrite;
 			sourceTree = "<group>";
 		};
+		596844A429609DFB009EF84B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				596844AB2960CE7D009EF84B /* Files */,
+				596844A929609E78009EF84B /* ModsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		596844AB2960CE7D009EF84B /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				596844A729609E60009EF84B /* FilesView.swift */,
+				596844AC2960CE93009EF84B /* FilesImpl.swift */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		597F69E2295B3DA700E9DDF3 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +205,7 @@
 		597F69ED295B3DA700E9DDF3 /* TrollMods */ = {
 			isa = PBXGroup;
 			children = (
+				596844A429609DFB009EF84B /* Views */,
 				597F6A08295B4BA400E9DDF3 /* vm_unaligned_copy_switch_race.h */,
 				597F6A0A295B4C3800E9DDF3 /* vm_unaligned_copy_switch_race.c */,
 				597F69FC295B3EC500E9DDF3 /* Mods */,
@@ -401,9 +426,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				597F69F1295B3DA700E9DDF3 /* ContentView.swift in Sources */,
+				596844AD2960CE93009EF84B /* FilesImpl.swift in Sources */,
+				596844A829609E60009EF84B /* FilesView.swift in Sources */,
 				5900780B295E21FF00A95DDA /* Overwrite.swift in Sources */,
 				59007801295E130C00A95DDA /* TrollFXImpl.swift in Sources */,
 				597F69EF295B3DA700E9DDF3 /* TrollModsApp.swift in Sources */,
+				596844AA29609E78009EF84B /* ModsView.swift in Sources */,
 				597F6A0B295B4C3800E9DDF3 /* vm_unaligned_copy_switch_race.c in Sources */,
 				59007802295E130C00A95DDA /* TrollFXView.swift in Sources */,
 				597F6A02295B42E400E9DDF3 /* TrollLock.swift in Sources */,
