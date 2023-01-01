@@ -3,6 +3,9 @@ Collection of mods based on the [MacDirtyCow exploit](https://github.com/zhuowei
 
 # Why?
 You may be wondering, why install this, when I can install the original tweaks from their original creators? While you can do that, it's important to note that regular users are limited to three sideloaded apps. TrollMods collects these tweaks into one app, allowing the user to sideload two other apps of their choice. :)
+
+# Disclaimer
+While this tweak should be safe, iOS 14 users have reported not being able to revert changes. If you have the opportunity, use jailbreak tweaks instead of this app, and be prepared to restore files if you're not happy. The developers shall not be held responsible for any damage you may cause using this app, regardless of iOS version.
  
 # TrollMods
 All TrollMods have been rewritten to be more user-friendly (in my opinion) and more efficient. This means that the experience may not be the same as the originals, but are definitely still functioning as intended.
