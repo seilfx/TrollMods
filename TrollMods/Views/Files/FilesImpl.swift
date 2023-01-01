@@ -18,7 +18,6 @@ public struct File: Identifiable {
 public struct Folder: Identifiable {
     public var id = UUID()
     public var name: String
-    public var contents: [File]
 }
 
 public struct DirectoryContent {
@@ -29,35 +28,55 @@ public struct DirectoryContent {
 public func loadPath(atPath: String) -> DirectoryContent {
     var directoryContent: DirectoryContent = DirectoryContent(folders: [], files: [])
     
-    let enumerator = FileManager.default.enumerator(atPath: atPath)
-    while let element = enumerator?.nextObject() as? String {
-        // only do the top level files and folders
-        if element.contains("/") {
-            continue
-        }
-        let attrs = try! FileManager.default.attributesOfItem(atPath: atPath + element)
-        let type = attrs[.type] as! FileAttributeType
-        if type == .typeDirectory {
-            directoryContent.folders.append(Folder(name: element, contents: []))
-        } else if type == .typeRegular {
-            let size = attrs[.size] as! UInt64
-            let date = attrs[.modificationDate] as! Date
-            let formatter = DateFormatter()
-            formatter.dateStyle = .short
-            formatter.timeStyle = .short
-            let dateString = formatter.string(from: date)
-            var sizeString = ""
-            if size < 1024 {
-                sizeString = "\(size) B"
-            } else if size < 1024 * 1024 {
-                sizeString = "\(size / 1024) KB"
-            } else if size < 1024 * 1024 * 1024 {
-                sizeString = "\(size / 1024 / 1024) MB"
-            } else {
-                sizeString = "\(size / 1024 / 1024 / 1024) GB"
+    do {
+        let directoryContents = try FileManager.default.contentsOfDirectory(atPath: atPath)
+        print(directoryContents)
+        
+        for dirItem in directoryContents {
+            print("Processing `\(dirItem)`")
+            
+            var attrs: [FileAttributeKey : Any] = [:]
+            
+            do {
+                attrs = try FileManager.default.attributesOfItem(atPath: atPath + dirItem)
+            } catch {
+                print("Error while reading attributes of `\(dirItem)`. Skipping: \(error)")
+                continue
             }
-            directoryContent.files.append(File(name: element, type: element.components(separatedBy: ".").last!, size: sizeString, date: dateString))
+            
+            let type = attrs[.type] as! FileAttributeType
+            
+            print(type);
+            
+            if (type == .typeDirectory) {
+                directoryContent.folders.append(Folder(name: dirItem))
+            } else if (type == .typeRegular) {
+                let date = attrs[.modificationDate] as! Date
+                let formatter = DateFormatter()
+                formatter.dateStyle = .short
+                formatter.timeStyle = .short
+                let dateString = formatter.string(from: date)
+                
+                let size = attrs[.size] as! UInt64
+                var sizeString = ""
+                
+                switch size {
+                    case 0..<1024:
+                        sizeString = "\(size) B"
+                    case 1024..<1024 * 1024:
+                        sizeString = "\(size / 1024) KB"
+                    case 1024 * 1024..<1024 * 1024 * 1024:
+                        sizeString = "\(size / 1024 / 1024) MB"
+                    default:
+                        sizeString = "\(size / 1024 / 1024) GB"
+                }
+                
+                directoryContent.files.append(File(name: dirItem, type: dirItem.components(separatedBy: ".").last!, size: sizeString, date: dateString))
+            }
         }
+        
+    } catch {
+        print("Error while reading path: \(error)")
     }
     
     return directoryContent;
