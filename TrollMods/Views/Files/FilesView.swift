@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+private var MOD_VERSION: String = "v1.1"
+
 private var folderCache: [String: [Folder]] = [:]
 private var fileCache: [String: [File]] = [:]
 
@@ -35,6 +37,8 @@ struct ListItem: View {
 }
 
 struct FileList: View {
+    @State private var showInfo = false;
+    
     @State var path: String = "/"
     @State private var folders: [Folder] = []
     @State private var files: [File] = []
@@ -139,6 +143,21 @@ struct FileList: View {
             }
             .navigationTitle(path)
             .toolbar {
+                if (path == "/") {
+                    Button(action: { showInfo = true }) {
+                        Image(systemName: "info.circle")
+                    }
+                    .alert(isPresented: $showInfo) {
+                        Alert(
+                            title: Text("File Browser (\(MOD_VERSION))"),
+                            message: Text("By Mineek"),
+                            primaryButton: .default(Text("Mineek on GitHub")) {
+                                UIApplication.shared.open(URL(string: "https://github.com/mineek")!)
+                            },
+                            secondaryButton: .cancel()
+                        )
+                    }
+                }
                 if(!isSearching) {
                     Button(action: { loadDirectory(refreshDirectory: true) }) {
                         Image(systemName: "arrow.clockwise")
