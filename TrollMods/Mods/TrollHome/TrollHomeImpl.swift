@@ -8,11 +8,13 @@
 import Foundation
 
 private var folderFiles = [
-        "/System/Library/PrivateFrameworks/SpringBoardHome.framework/folderBackground.materialrecipe",
-        "/System/Library/PrivateFrameworks/SpringBoardHome.framework/folderLight.materialrecipe",
-        
-        "/System/Library/PrivateFrameworks/SpringBoardHome.framework/folderExpandedDark.materialrecipe",
-        "/System/Library/PrivateFrameworks/SpringBoardHome.framework/folderExpandedLight.materialrecipe",
+    "/System/Library/PrivateFrameworks/SpringBoardHome.framework/folderBackground.materialrecipe",
+    
+    "/System/Library/PrivateFrameworks/SpringBoardHome.framework/folderDark.materialrecipe",
+    "/System/Library/PrivateFrameworks/SpringBoardHome.framework/folderLight.materialrecipe",
+    
+    "/System/Library/PrivateFrameworks/SpringBoardHome.framework/folderExpandedDark.descendantrecipe",
+    "/System/Library/PrivateFrameworks/SpringBoardHome.framework/folderExpandedLight.descendantrecipe",
 ]
 
 private var dockFiles = [
