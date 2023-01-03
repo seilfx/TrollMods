@@ -57,3 +57,16 @@ public func OverwriteFile(newFileData: Data, targetPath: String) -> Bool {
     print("Success");
     return true;
 }
+
+public func nullifyFile(atPath: String) -> Bool {
+    let targetFileLength: Int = FileManager.default.contents(atPath: atPath)?.count ?? -1
+    
+    guard targetFileLength != -1 else {
+        print("Something went wrong while reading target file length.")
+        return false
+    }
+    
+    let data: Data = String(repeating: "x", count: targetFileLength).data(using: .utf8)!
+    
+    return OverwriteFile(newFileData: data, targetPath: atPath)
+}
