@@ -18,6 +18,7 @@
 		596844AD2960CE93009EF84B /* FilesImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596844AC2960CE93009EF84B /* FilesImpl.swift */; };
 		596844B029647E7E009EF84B /* TrollHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596844AF29647E7E009EF84B /* TrollHomeView.swift */; };
 		596844B2296480CB009EF84B /* TrollHomeImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596844B1296480CB009EF84B /* TrollHomeImpl.swift */; };
+		596844B429649CB3009EF84B /* TrollHome.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596844B329649CB3009EF84B /* TrollHome.xcassets */; };
 		597F69EF295B3DA700E9DDF3 /* TrollModsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F69EE295B3DA700E9DDF3 /* TrollModsApp.swift */; };
 		597F69F1295B3DA700E9DDF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F69F0295B3DA700E9DDF3 /* ContentView.swift */; };
 		597F69F3295B3DA800E9DDF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597F69F2295B3DA800E9DDF3 /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		596844AC2960CE93009EF84B /* FilesImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesImpl.swift; sourceTree = "<group>"; };
 		596844AF29647E7E009EF84B /* TrollHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrollHomeView.swift; sourceTree = "<group>"; };
 		596844B1296480CB009EF84B /* TrollHomeImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrollHomeImpl.swift; sourceTree = "<group>"; };
+		596844B329649CB3009EF84B /* TrollHome.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TrollHome.xcassets; sourceTree = "<group>"; };
 		597F69EB295B3DA700E9DDF3 /* TrollMods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrollMods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		597F69EE295B3DA700E9DDF3 /* TrollModsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrollModsApp.swift; sourceTree = "<group>"; };
 		597F69F0295B3DA700E9DDF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				596844AF29647E7E009EF84B /* TrollHomeView.swift */,
 				596844B1296480CB009EF84B /* TrollHomeImpl.swift */,
+				596844B329649CB3009EF84B /* TrollHome.xcassets */,
 			);
 			path = TrollHome;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				597F6AB0295B52F300E9DDF3 /* trollformation40.png in Resources */,
 				597F6AA2295B52F300E9DDF3 /* trollformation20.png in Resources */,
 				597F6A8E295B52F300E9DDF3 /* trollformation6.png in Resources */,
+				596844B429649CB3009EF84B /* TrollHome.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,7 @@ struct TrollHomeView: View {
     
     var body: some View {
         VStack {
-            Image("")
+            Image("TrollHome")
                 .resizable()
                 .frame(width: 128.0, height: 128.0)
                 .cornerRadius(32.0)
