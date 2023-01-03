@@ -62,7 +62,7 @@ public func nullifyFile(atPath: String) -> Bool {
     let targetFileLength: Int = FileManager.default.contents(atPath: atPath)?.count ?? -1
     
     guard targetFileLength != -1 else {
-        print("Something went wrong while reading target file length.")
+        print("Something went wrong while reading length of \(atPath).")
         return false
     }
     
