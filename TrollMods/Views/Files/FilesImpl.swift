@@ -28,6 +28,8 @@ public struct DirectoryContent {
 public func loadPath(atPath: String) -> DirectoryContent {
     var directoryContent: DirectoryContent = DirectoryContent(folders: [], files: [])
     
+    print(atPath)
+    
     do {
         let directoryContents = try FileManager.default.contentsOfDirectory(atPath: atPath)
         print(directoryContents)
@@ -45,8 +47,6 @@ public func loadPath(atPath: String) -> DirectoryContent {
             }
             
             let type = attrs[.type] as! FileAttributeType
-            
-            print(type);
             
             if (type == .typeDirectory) {
                 directoryContent.folders.append(Folder(name: dirItem))
