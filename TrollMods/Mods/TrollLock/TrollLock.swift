@@ -17,7 +17,7 @@ private let globalLockPaths: [String] = [
 	"2x-812h",
 ];
 private let deviceLockPath: [String: String] = [
-	"iPhone15,3": "3x-896h", // iPhone 14 Pro Max 3x-d73?
+	"iPhone15,3": "3x-d73", // iPhone 14 Pro Max
 	"iPhone15,2": "3x-d73", // iPhone 14 Pro
 	"iPhone14,7": "3x-812h", // iPhone 14
 	
@@ -31,7 +31,7 @@ private let deviceLockPath: [String: String] = [
 	"iPhone13,2": "3x-812h", // iPhone 12
 	"iPhone13,1": "3x-812h", // iPhone 12 Mini
 	
-	"iPhone12,5": "3x-896h", // iPhone 11 Pro Max
+	"iPhone12,5": "3x-812h", // iPhone 11 Pro Max
 	"iPhone12,3": "2x-896h", // iPhone 11 Pro
 	"iPhone12,1": "2x-812h", // iPhone 11
 	
