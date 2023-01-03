@@ -17,8 +17,8 @@ func cleanSpringboardHome(hideDock: Bool, hideFolder: Bool) {
 struct TrollHomeView: View {
     @State private var showInfo = false;
     
-    @State private var hideFolderBackground = false;
-    @State private var hideDockBackground = false;
+    @AppStorage("TH_HideFolderBackground") private var hideFolderBackground = false;
+    @AppStorage("TH_HideDockBackground") private var hideDockBackground = false;
     
     var body: some View {
         VStack {
