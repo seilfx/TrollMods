@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+func respring() {
+    Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
+        guard let window = UIApplication.shared.windows.first else { return }
+        while true {
+            window.snapshotView(afterScreenUpdates: false)
+        }
+    }
+}
+
 struct ModsList: View {
     var body: some View {
         List {
@@ -46,14 +55,7 @@ struct ModsList: View {
         }
         .navigationTitle("TrollMods")
         
-        Button("Respring", action: {
-            Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
-                guard let window = UIApplication.shared.windows.first else { return }
-                while true {
-                    window.snapshotView(afterScreenUpdates: false)
-                }
-            }
-        })
+        Button("Respring", action: respring)
         .buttonStyle(.bordered)
         .controlSize(.large)
         .tint(.red);

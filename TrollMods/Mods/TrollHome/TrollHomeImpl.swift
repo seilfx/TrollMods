@@ -23,17 +23,25 @@ private var dockFiles = [
 ]
 
 public func removeFolderBackground() {
-    DispatchQueue.global(qos: .userInteractive).async {
-        folderFiles.forEach { path in
-            let _ = nullifyFile(atPath: path)
-        }
+    folderFiles.forEach { path in
+        print("Clearing \(path)...")
+        let _ = nullifyFile(atPath: path)
     }
+    
+    print("Successfully cleared folder backgrounds!")
 }
 
 public func removeDockBackground() {
-    DispatchQueue.global(qos: .userInteractive).async {
-        dockFiles.forEach { path in
-            let _ = nullifyFile(atPath: path)
-        }
+    dockFiles.forEach { path in
+        print("Clearing \(path)...")
+        let _ = nullifyFile(atPath: path)
     }
+    
+    print("Successfully cleared dock background!")
+}
+
+public func removeHomebar() {
+    let success = nullifyFile(atPath: "/System/Library/PrivateFrameworks/MaterialKit.framework/Assets.car")
+    
+    print("Cleared home bar: \(success)")
 }

@@ -9,9 +9,12 @@ import SwiftUI
 
 private var MOD_VERSION = "v0.1";
 
-func cleanSpringboardHome(hideDock: Bool, hideFolder: Bool) {
-    if (hideDock) { removeDockBackground() }
-    if (hideFolder) { removeFolderBackground() }
+func cleanSpringboardHome(hideDock: Bool, hideFolder: Bool, hideHomebar: Bool) {
+    DispatchQueue.global(qos: .userInteractive).async {
+        if (hideDock) { removeDockBackground() }
+        if (hideFolder) { removeFolderBackground() }
+        if (hideHomebar) { removeHomebar() }
+    }
 }
 
 struct TrollHomeView: View {
@@ -19,6 +22,7 @@ struct TrollHomeView: View {
     
     @AppStorage("TH_HideFolderBackground") private var hideFolderBackground = false;
     @AppStorage("TH_HideDockBackground") private var hideDockBackground = false;
+    @AppStorage("TH_HideHomebar") private var hideHomebar = false;
     
     var body: some View {
         VStack {
@@ -37,6 +41,10 @@ struct TrollHomeView: View {
                 Toggle(isOn: $hideDockBackground) {
                     Text("Hide dock background")
                 }
+                
+                Toggle(isOn: $hideHomebar) {
+                    Text("Hide home bar")
+                }
             }
         }
         
@@ -52,7 +60,7 @@ struct TrollHomeView: View {
             }
         }
         
-        Button("Apply Changes", action: { cleanSpringboardHome(hideDock: hideDockBackground, hideFolder: hideFolderBackground)}  )
+        Button("Apply Changes", action: { cleanSpringboardHome(hideDock: hideDockBackground, hideFolder: hideFolderBackground, hideHomebar: hideHomebar)}  )
             .controlSize(.large)
             .tint(.blue)
             .buttonStyle(.bordered)
