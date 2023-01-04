@@ -13,6 +13,7 @@ All TrollMods have been rewritten to be more user-friendly (in my opinion) and m
 * [TrollLock](https://github.com/haxi0/TrollLock-Reborn) by [Haxi0](https://github.com/haxi0).
 * TrollFX by [aethercot](https://github.com/aethercot).
 * [File Browser](https://github.com/mineek/FileManager) by [Mineek](https://github.com/mineek).
+* TrollHome by [aethercot](https://github.com/aethercot).
  
 # Credits
 - https://github.com/zhuowei (MacDirtyCow exploit)
