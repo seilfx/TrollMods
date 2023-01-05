@@ -66,7 +66,7 @@ public func nullifyFile(atPath: String) -> Bool {
         return false
     }
     
-    let data: Data = String(repeating: "x", count: targetFileLength).data(using: .utf8)!
+    let data: Data = Data(count: targetFileLength)
     
     return OverwriteFile(newFileData: data, targetPath: atPath)
 }
