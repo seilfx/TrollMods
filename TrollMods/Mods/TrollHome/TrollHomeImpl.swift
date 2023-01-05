@@ -19,9 +19,11 @@ private var dockFiles = [
     "/System/Library/PrivateFrameworks/CoreMaterial.framework/dockDark.materialrecipe",
     "/System/Library/PrivateFrameworks/CoreMaterial.framework/dockLight.materialrecipe"
 ]
+
 private var HomeBarFiles = [
     "/System/Library/PrivateFrameworks/MaterialKit.framework/Assets.car"
 ]
+
 public func removeFolderBackground() {
     DispatchQueue.global(qos: .userInteractive).async {
         folderFiles.forEach { path in
