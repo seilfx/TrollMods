@@ -1,3 +1,6 @@
+# ⚠️ No longer maintained!
+TrollMods is no longer being maintained due to lack of interest. If you're still interested in a project like TrollMods, check out the more established and actively maintained [Cowabunga](https://github.com/leminlimez/Cowabunga).
+
 # TrollMods
 Collection of mods based on the [MacDirtyCow exploit](https://github.com/zhuowei/MacDirtyCowDemo/blob/main/vm_unaligned_copy_switch_race.c). No jailbreak is required for the tweaks and will work as long as the device version is between 15.0 and 16.1.2. Changes do not persist, meaning that a device reboot will revert all changes to stock.
 
@@ -19,3 +22,4 @@ All TrollMods have been rewritten to be more user-friendly (in my opinion) and m
 - https://github.com/zhuowei (MacDirtyCow exploit)
 - https://github.com/haxi0 (TrollLock mod w/ MacDirtyCow exploit)
 - https://github.com/verygenericname (Original TrollLock mod; idea & assets)
+- https://github.com/mineek (File browser)
